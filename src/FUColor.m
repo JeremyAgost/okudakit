@@ -67,7 +67,7 @@
 	[internalObj getRed:&junk green:&ret blue:&junk alpha:&junk];
 	return ret;
 #else
-	return [internalObj redComponent];
+	return [internalObj greenComponent];
 #endif
 }
 
@@ -79,7 +79,7 @@
 	[internalObj getRed:&junk green:&junk blue:&ret alpha:&junk];
 	return ret;
 #else
-	return [internalObj redComponent];
+	return [internalObj blueComponent];
 #endif
 }
 
@@ -91,7 +91,7 @@
 	[internalObj getRed:&junk green:&junk blue:&junk alpha:&ret];
 	return ret;
 #else
-	return [internalObj redComponent];
+	return [internalObj alphaComponent];
 #endif
 }
 
