@@ -14,23 +14,25 @@
 #define OSSPECColor NSColor
 #endif
 
+#define defColor(_clr) + (FUColor *)_clr { OSSPECColor * c = [OSSPECColor _clr]; return [FUColor wrap:c]; }
+
 @implementation FUColor
 
-+ (FUColor *)blackColor	{ 	OSSPECColor * c = [OSSPECColor blackColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)blueColor	{ 	OSSPECColor * c = [OSSPECColor blueColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)brownColor	{ 	OSSPECColor * c = [OSSPECColor brownColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)clearColor	{ 	OSSPECColor * c = [OSSPECColor clearColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)cyanColor	{ 	OSSPECColor * c = [OSSPECColor cyanColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)darkGrayColor	{ 	OSSPECColor * c = [OSSPECColor darkGrayColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)grayColor	{ 	OSSPECColor * c = [OSSPECColor grayColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)greenColor	{ 	OSSPECColor * c = [OSSPECColor greenColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)lightGrayColor	{ 	OSSPECColor * c = [OSSPECColor lightGrayColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)magentaColor	{ 	OSSPECColor * c = [OSSPECColor magentaColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)orangeColor	{ 	OSSPECColor * c = [OSSPECColor orangeColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)purpleColor	{ 	OSSPECColor * c = [OSSPECColor purpleColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)redColor	{ 	OSSPECColor * c = [OSSPECColor redColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)whiteColor	{ 	OSSPECColor * c = [OSSPECColor whiteColor]; 	return [FUColor wrap:c]; }
-+ (FUColor *)yellowColor	{ 	OSSPECColor * c = [OSSPECColor yellowColor]; 	return [FUColor wrap:c]; }
+defColor(blackColor)
+defColor(blueColor)
+defColor(brownColor)
+defColor(clearColor)
+defColor(cyanColor)
+defColor(darkGrayColor)
+defColor(grayColor)
+defColor(greenColor)
+defColor(lightGrayColor)
+defColor(magentaColor)
+defColor(orangeColor)
+defColor(purpleColor)
+defColor(redColor)
+defColor(whiteColor)
+defColor(yellowColor)
 
 + (FUColor *)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
 {
