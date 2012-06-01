@@ -2,11 +2,11 @@ h1. OkudaKit
         
 h3. What is it?
 
-An open source (BSD-license) **Mac OS X Framework** written by "Todd Ditchendorf":http://twitter.com/itod for adding **syntax highlighting** to Cocoa desktop applications using **CSS**.
+An open source (BSD-license) **Cocoa Framework** for adding **syntax highlighting** to Cocoa applications using **CSS**. It was started by "Todd Ditchendorf":http://twitter.com/itod. This fork delivering iOS support is courtesy of Jeremy Agostino.
 
 h3. Why is it cool?
 
-OkudaKit produces syntax highlighted NSAttributedStrings for use in NSTextViews via **CSS stylesheets**. 
+OkudaKit produces syntax highlighted NSAttributedStrings for use in NSTextViews (or similar display outlets) via **CSS stylesheets**. 
 
 h3. How?
 
@@ -34,6 +34,7 @@ I'm working on these problems now. Stay tuned.
 h3. What are the requirements?
 
 * Mac OS X Leopard or later
+* iOS 3.2/4.0 or later
 * "ParseKit":http://parsekit.com (included in the OkudaKit source)
 
 
@@ -41,10 +42,6 @@ h3. WebKit isn't required?
 
 No.
 
-h3. Why doesn't this work on iPhone OS?
+h3. iPhone OS?
 
-Cuz there's no NSAttributedString on iPhone OS.
-
-h3. What's with the name?
-
-As a kid I was constantly fascinated with the flashing, blinking, multi-colored user-interface displays on Star Trek: The Next Generation. The UI designs for those displays were designed by "Michael Okuda":http://en.wikipedia.org/wiki/Michael_Okuda and sometimes called **OkudaGrams**. The bright colors of syntax highlighting themes remind me of the colorful text often seen in OkudaGrams. So, OkudaKit. Also, I didn't know what else to call it.
+iOS 3.2/4.0 and higher has support for NSAttributedString but it's somewhat gutted compared to the Mac OS X version. One of the reasons I forked this was to make OkudaKit actually build on iOS. You'd have to find a third party library to display any attributed text, since things like UILabel don't have any support for it.
