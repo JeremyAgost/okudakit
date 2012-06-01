@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		80D74AD7157877F6001C7067 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D74AD6157877F6001C7067 /* SenTestingKit.framework */; };
-		80D74AD9157877F6001C7067 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D74AD8157877F6001C7067 /* UIKit.framework */; };
-		80D74ADA157877F6001C7067 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D74AC8157877F6001C7067 /* Foundation.framework */; };
 		80D74ADD157877F6001C7067 /* libOkudaKitMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D74AC6157877F6001C7067 /* libOkudaKitMobile.a */; };
 		80D74AE3157877F6001C7067 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80D74AE1157877F6001C7067 /* InfoPlist.strings */; };
 		80D74AE6157877F6001C7067 /* OkudaKitMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D74AE5157877F6001C7067 /* OkudaKitMobileTests.m */; };
@@ -23,7 +21,6 @@
 		80D74AF7157878C2001C7067 /* OkudaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D3A81B23101E904600C38137 /* OkudaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80D74AF8157878C8001C7067 /* OKSyntaxHighlighter.h in Headers */ = {isa = PBXBuildFile; fileRef = D3A81972101E8D5400C38137 /* OKSyntaxHighlighter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80D74AFA1578790F001C7067 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
-		80D74B0E157879A9001C7067 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D74B0D157879A9001C7067 /* UIKit.framework */; };
 		80D74B1215787E80001C7067 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D74B1115787E80001C7067 /* CoreText.framework */; };
 		80D74B1515788280001C7067 /* FUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D74B1315788280001C7067 /* FUColor.h */; };
 		80D74B1615788280001C7067 /* FUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D74B1315788280001C7067 /* FUColor.h */; };
@@ -164,18 +161,15 @@
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* OkudaKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkudaKit_Prefix.pch; sourceTree = "<group>"; };
 		80D74AC6157877F6001C7067 /* libOkudaKitMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOkudaKitMobile.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		80D74AC8157877F6001C7067 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		80D74ACC157877F6001C7067 /* OkudaKitMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OkudaKitMobile-Prefix.pch"; sourceTree = "<group>"; };
 		80D74ACD157877F6001C7067 /* OkudaKitMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkudaKitMobile.h; sourceTree = "<group>"; };
 		80D74AD5157877F6001C7067 /* OkudaKitMobileTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OkudaKitMobileTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D74AD6157877F6001C7067 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		80D74AD8157877F6001C7067 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		80D74AE0157877F6001C7067 /* OkudaKitMobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OkudaKitMobileTests-Info.plist"; sourceTree = "<group>"; };
 		80D74AE2157877F6001C7067 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		80D74AE4157877F6001C7067 /* OkudaKitMobileTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkudaKitMobileTests.h; sourceTree = "<group>"; };
 		80D74AE5157877F6001C7067 /* OkudaKitMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OkudaKitMobileTests.m; sourceTree = "<group>"; };
 		80D74AF41578788C001C7067 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		80D74B0D157879A9001C7067 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		80D74B1115787E80001C7067 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		80D74B1315788280001C7067 /* FUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = FUColor.h; path = src/FUColor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		80D74B1415788280001C7067 /* FUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FUColor.m; path = src/FUColor.m; sourceTree = "<group>"; };
@@ -234,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80D74B1215787E80001C7067 /* CoreText.framework in Frameworks */,
-				80D74B0E157879A9001C7067 /* UIKit.framework in Frameworks */,
 				80D74AF51578788C001C7067 /* Foundation.framework in Frameworks */,
 				80D74AF6157878AB001C7067 /* libparsekit.a in Frameworks */,
 			);
@@ -245,8 +238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80D74AD7157877F6001C7067 /* SenTestingKit.framework in Frameworks */,
-				80D74AD9157877F6001C7067 /* UIKit.framework in Frameworks */,
-				80D74ADA157877F6001C7067 /* Foundation.framework in Frameworks */,
 				80D74ADD157877F6001C7067 /* libOkudaKitMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,11 +375,8 @@
 			isa = PBXGroup;
 			children = (
 				80D74B1115787E80001C7067 /* CoreText.framework */,
-				80D74B0D157879A9001C7067 /* UIKit.framework */,
 				80D74AF41578788C001C7067 /* Foundation.framework */,
-				80D74AC8157877F6001C7067 /* Foundation.framework */,
 				80D74AD6157877F6001C7067 /* SenTestingKit.framework */,
-				80D74AD8157877F6001C7067 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -916,7 +904,7 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/lib/parsekit/build/$(BUILD_STYLE)";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_GC = supported;
@@ -944,7 +932,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/lib/parsekit/build/$(BUILD_STYLE)";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
@@ -994,7 +982,7 @@
 				DSTROOT = /tmp/OkudaKitMobile.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/lib/parsekit/build/$(BUILD_STYLE)",
+					"$(BUILT_PRODUCTS_DIR)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1029,7 +1017,7 @@
 				DSTROOT = /tmp/OkudaKitMobile.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/lib/parsekit/build/$(BUILD_STYLE)",
+					"$(BUILT_PRODUCTS_DIR)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
