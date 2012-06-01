@@ -11,26 +11,36 @@
 
 @delimitedString = '<?' '?>' nil;
 @delimitedString = '<!DOCTYPE' '>' nil;
+@delimitedString = '<![CDATA[' ']]>' nil;
 @delimitState.fallbackState = symbolState;
 
 @start          = any*;
-any             = element | text | doctype | pi | comment;
+any             = element | text | doctype | cdata | pi | comment;
 
 pi              = DelimitedString('<?', '?>');
-
+cdata           = DelimitedString('<![CDATA[', ']]>');
 doctype         = DelimitedString('<!DOCTYPE', '>');
+
 element         = emptyTag | startTag elementContent* endTag;
-elementContent  = element | text | comment | pi;
+elementContent  = element | text | comment | pi | cdata;
 text            = /[^<]+/;
 
 emptyTag        = lt tagName attr* fwdSlash gt;
 startTag        = lt junk? tagName attr* gt;
 endTag          = lt fwdSlash tagName gt;
 
-tagName         = Word;
+qName           = qualifiedName | unqualifiedName;
+qualifiedName   = prefix colon unqualifiedName;
+unqualifiedName = Word;
+
+prefix          = Word;
+suffix          = Word;
+colon           = ':';
+
+tagName         = qName;
 
 attr            = attrName (eq attrValue)?;
-attrName        = Word;
+attrName        = qName;
 attrValue       = QuotedString;
 
 eq              = '=';

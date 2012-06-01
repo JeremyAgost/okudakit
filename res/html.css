@@ -1,4 +1,4 @@
-lt, gt, fwdSlash, endTagStart, eq {
+lt, gt, fwdSlash, endTagStart {
     color:rgb(178.5, 35.7, 135.15);
     background-color:rgb(20, 20, 26);
     font-family:'Monaco';
@@ -12,7 +12,7 @@ eq {
     font-size:11px;
 }
 
-tagName {
+prefix, suffix, unqualifiedName {
     color:rgb(178.5, 35.7, 135.15);
     background-color:rgb(20, 20, 26);
     font-family:'Monaco';
@@ -41,7 +41,7 @@ text {
     font-size:11px;
 }
 
-comment {
+comment, colon, doctype, cdata {
     color:rgb(61.2, 178.5, 68.85);
     background-color:rgb(30, 30, 36);
     font-family:'Monaco';
@@ -50,13 +50,6 @@ comment {
 
 pi {
     color:rgb(22.95, 158.1, 188.7);
-    background-color:rgb(30, 30, 36);
-    font-family:'Monaco';
-    font-size:11px;
-}
-
-doctype {
-    color:rgb(178.5, 35.7, 135.15);
     background-color:rgb(30, 30, 36);
     font-family:'Monaco';
     font-size:11px;
