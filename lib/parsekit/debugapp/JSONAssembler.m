@@ -8,6 +8,7 @@
 
 #import "JSONAssembler.h"
 #import "NSArray+ParseKitAdditions.h"
+#import "FUColor.h"
 #import <ParseKit/ParseKit.h>
 
 @implementation JSONAssembler
@@ -15,38 +16,38 @@
 - (id)init {
     self = [super init];
     if (self != nil) {
-        NSColor *textColor = [NSColor whiteColor];
-        NSColor *tagColor = [NSColor colorWithDeviceRed:.70 green:.14 blue:.53 alpha:1.];
-        NSColor *attrNameColor = [NSColor colorWithDeviceRed:.33 green:.45 blue:.48 alpha:1.];
-        NSColor *attrValueColor = [NSColor colorWithDeviceRed:.77 green:.18 blue:.20 alpha:1.];
-        NSColor *commentColor = [NSColor colorWithDeviceRed:.24 green:.70 blue:.27 alpha:1.];
-        NSColor *piColor = [NSColor colorWithDeviceRed:.09 green:.62 blue:.74 alpha:1.];
+        FUColor *textColor = [FUColor whiteColor];
+        FUColor *tagColor = [FUColor colorWithDeviceRed:.70 green:.14 blue:.53 alpha:1.];
+        FUColor *attrNameColor = [FUColor colorWithDeviceRed:.33 green:.45 blue:.48 alpha:1.];
+        FUColor *attrValueColor = [FUColor colorWithDeviceRed:.77 green:.18 blue:.20 alpha:1.];
+        FUColor *commentColor = [FUColor colorWithDeviceRed:.24 green:.70 blue:.27 alpha:1.];
+        FUColor *piColor = [FUColor colorWithDeviceRed:.09 green:.62 blue:.74 alpha:1.];
 
-        NSFont *monacoFont = [NSFont fontWithName:@"Monaco" size:11.];
+        FUFont *monacoFont = [FUFont fontWithName:@"Monaco" size:11.];
             
         self.defaultAttrs      = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  textColor, NSForegroundColorAttributeName,
-                                  monacoFont, NSFontAttributeName,
+                                  [textColor attribute], FUForegroundColorAttributeName(),
+                                  [monacoFont attribute], FUFontAttributeName,
                                   nil];
         self.objectAttrs       = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  tagColor, NSForegroundColorAttributeName,
-                                  monacoFont, NSFontAttributeName,
+                                  [tagColor attribute], FUForegroundColorAttributeName(),
+                                  [monacoFont attribute], FUFontAttributeName,
                                   nil];
         self.propertyNameAttrs = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  attrNameColor, NSForegroundColorAttributeName,
-                                  monacoFont, NSFontAttributeName,
+                                  [attrNameColor attribute], FUForegroundColorAttributeName(),
+                                  [monacoFont attribute], FUFontAttributeName,
                                   nil];
         self.valueAttrs        = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  attrValueColor, NSForegroundColorAttributeName,
-                                  monacoFont, NSFontAttributeName,
+                                  [attrValueColor attribute], FUForegroundColorAttributeName(),
+                                  [monacoFont attribute], FUFontAttributeName,
                                   nil];
         self.constantAttrs     = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  piColor, NSForegroundColorAttributeName,
-                                  monacoFont, NSFontAttributeName,
+                                  [piColor attribute], FUForegroundColorAttributeName(),
+                                  [monacoFont attribute], FUFontAttributeName,
                                   nil];
         self.arrayAttrs        = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  commentColor, NSForegroundColorAttributeName,
-                                  monacoFont, NSFontAttributeName,
+                                  [commentColor attribute], FUForegroundColorAttributeName(),
+                                  [monacoFont attribute], FUFontAttributeName,
                                   nil];
 
         self.displayString = [[[NSMutableAttributedString alloc] initWithString:@"" attributes:defaultAttrs] autorelease];

@@ -8,6 +8,8 @@
 
 #import "OKGenericAssembler.h"
 #import "NSArray+ParseKitAdditions.h"
+#import "FUColor.h"
+#import "FUFont.h"
 #import <ParseKit/ParseKit.h>
 
 @interface OKGenericAssembler ()
@@ -29,9 +31,9 @@
     if (self = [super init]) {
         self.productionNames = [NSMutableDictionary dictionary];
         self.defaultProperties = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  [NSColor blackColor], NSForegroundColorAttributeName,
-                                  [NSColor whiteColor], NSBackgroundColorAttributeName,
-                                  [NSFont fontWithName:@"Monaco" size:11.0], NSFontAttributeName,
+                                  [[FUColor blackColor] attribute], FUForegroundColorAttributeName(),
+                                  [[FUColor whiteColor] attribute], FUBackgroundColorAttributeName(),
+                                  [[FUFont fontWithName:@"Monaco" size:11.0] attribute], FUFontAttributeName(),
                                   nil];
         self.prefix = @"didMatch";
         self.suffix = @":";
@@ -85,7 +87,7 @@
     
     NSMutableArray *toks = nil;
     PKToken *tok = nil;
-    while (tok = [a pop]) {
+    while ((tok = [a pop])) {
         if (PKTokenTypeWhitespace != tok.tokenType) {
             if (!toks) toks = [NSMutableArray array];
             [toks addObject:tok];
@@ -125,7 +127,7 @@
 - (NSMutableArray *)popWhitespaceTokensFrom:(PKAssembly *)a {
     NSMutableArray *whitespaceToks = nil;
     PKToken *tok = nil;
-    while (tok = [a pop]) {
+    while ((tok = [a pop])) {
         if (PKTokenTypeWhitespace == tok.tokenType) {
             if (!whitespaceToks) {
                 whitespaceToks = [NSMutableArray array];

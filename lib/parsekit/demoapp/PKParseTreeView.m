@@ -12,6 +12,7 @@
 #import "PKRuleNode.h"
 #import "PKTokenNode.h"
 #import "PKParseTreeAssembler.h"
+#import "FUColor.h"
 
 #define ROW_HEIGHT 50.0
 #define CELL_WIDTH 55.0
@@ -32,8 +33,8 @@
 - (id)initWithFrame:(NSRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.labelAttrs = [NSDictionary dictionaryWithObjectsAndKeys:
-                           [NSFont boldSystemFontOfSize:10], NSFontAttributeName,
-                           [NSColor blackColor], NSForegroundColorAttributeName,
+                           [[FUFont boldSystemFontOfSize:10] attribute], FUFontAttributeName,
+                           [[FUColor blackColor] attribute], FUForegroundColorAttributeName(),
                            nil];
     }
     return self;
@@ -68,7 +69,7 @@
 
 
 - (void)drawRect:(NSRect)r {
-    [[NSColor whiteColor] set];
+    [[FUColor whiteColor] set];
     NSRectFill(r);
     
     [self drawTree:parseTree atPoint:NSMakePoint(r.size.width / 2, 20)];

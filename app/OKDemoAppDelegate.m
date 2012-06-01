@@ -51,7 +51,7 @@
 
 - (IBAction)highlight:(id)sender {
     self.displayString = nil;
-    [self doJSONHighlighting];
+    [self doHTMLHighlighting];
 }
 
 @synthesize displayString;

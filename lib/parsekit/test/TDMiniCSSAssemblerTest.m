@@ -7,6 +7,7 @@
 //
 
 #import "TDMiniCSSAssemblerTest.h"
+#import "FUColor.h"
 
 @implementation TDMiniCSSAssemblerTest
 
@@ -35,7 +36,7 @@
     id props = [ass.attributes objectForKey:@"bar"];
     TDNotNil(props);
     
-    NSColor *color = [props objectForKey:NSForegroundColorAttributeName];
+    FUColor *color = [FUColor wrap:[props objectForKey:FUForegroundColorAttributeName()]];
     TDNotNil(color);
     STAssertEqualsWithAccuracy([color redComponent], (CGFloat)(10.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([color greenComponent], (CGFloat)(200.0/255.0), 0.001, @"");
@@ -55,7 +56,7 @@
     id props = [ass.attributes objectForKey:@"bar"];
     TDNotNil(props);
     
-    NSColor *color = [props objectForKey:NSForegroundColorAttributeName];
+    FUColor *color = [FUColor wrap:[props objectForKey:FUForegroundColorAttributeName()]];
     TDNotNil(color);
     STAssertEqualsWithAccuracy([color redComponent], (CGFloat)(10.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([color greenComponent], (CGFloat)(200.0/255.0), 0.001, @"");
@@ -64,7 +65,7 @@
     props = [ass.attributes objectForKey:@"foo"];
     TDNotNil(props);
     
-    color = [props objectForKey:NSForegroundColorAttributeName];
+    color = [FUColor wrap:[props objectForKey:FUForegroundColorAttributeName()]];
     TDNotNil(color);
     STAssertEqualsWithAccuracy([color redComponent], (CGFloat)(10.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([color greenComponent], (CGFloat)(200.0/255.0), 0.001, @"");
@@ -84,7 +85,7 @@
     id props = [ass.attributes objectForKey:@"foo"];
     TDNotNil(props);
     
-    NSColor *color = [props objectForKey:NSBackgroundColorAttributeName];
+    FUColor *color = [FUColor wrap:[props objectForKey:FUBackgroundColorAttributeName()]];
     TDNotNil(color);
     STAssertEqualsWithAccuracy([color redComponent], (CGFloat)(255.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([color greenComponent], (CGFloat)(0.0/255.0), 0.001, @"");
@@ -104,7 +105,7 @@
     id props = [ass.attributes objectForKey:@"decl"];
     TDNotNil(props);
     
-    NSFont *font = [props objectForKey:NSFontAttributeName];
+    FUFont *font = [FUFont wrap:[props objectForKey:FUFontAttributeName()]];
     TDNotNil(font);
     TDEquals((CGFloat)[font pointSize], (CGFloat)12.0);
     TDEqualObjects([font familyName], @"Monaco");
@@ -123,7 +124,7 @@
     id props = [ass.attributes objectForKey:@"decl"];
     TDNotNil(props);
     
-    NSFont *font = [props objectForKey:NSFontAttributeName];
+    FUFont *font = [FUFont wrap:[props objectForKey:FUFontAttributeName()]];
     TDNotNil(font);
     TDEquals((CGFloat)[font pointSize], (CGFloat)9.0);
     TDEqualObjects([font familyName], @"Monaco");
@@ -142,7 +143,7 @@
     id props = [ass.attributes objectForKey:@"expr"];
     TDNotNil(props);
         
-    NSFont *font = [props objectForKey:NSFontAttributeName];
+    FUFont *font = [FUFont wrap:[props objectForKey:FUFontAttributeName()]];
     TDNotNil(font);
     TDEqualObjects([font familyName], @"Helvetica");
     TDEquals((CGFloat)[font pointSize], (CGFloat)16.0);
@@ -161,18 +162,18 @@
     id props = [ass.attributes objectForKey:@"expr"];
     TDNotNil(props);
     
-    NSFont *font = [props objectForKey:NSFontAttributeName];
+    FUFont *font = [FUFont wrap:[props objectForKey:FUFontAttributeName()]];
     TDNotNil(font);
     TDEqualObjects([font familyName], @"Courier");
     TDEquals((CGFloat)[font pointSize], (CGFloat)9.0);
 
-    NSColor *bgColor = [props objectForKey:NSBackgroundColorAttributeName];
+    FUColor *bgColor = [FUColor wrap:[props objectForKey:FUBackgroundColorAttributeName()]];
     TDNotNil(bgColor);
     STAssertEqualsWithAccuracy([bgColor redComponent], (CGFloat)(255.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([bgColor greenComponent], (CGFloat)(0.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([bgColor blueComponent], (CGFloat)(255.0/255.0), 0.001, @"");
 
-    NSColor *color = [props objectForKey:NSForegroundColorAttributeName];
+    FUColor *color = [FUColor wrap:[props objectForKey:FUForegroundColorAttributeName()]];
     TDNotNil(color);
     STAssertEqualsWithAccuracy([color redComponent], (CGFloat)(10.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([color greenComponent], (CGFloat)(200.0/255.0), 0.001, @"");
@@ -192,18 +193,18 @@
     id props = [ass.attributes objectForKey:@"expr"];
     TDNotNil(props);
     
-    NSFont *font = [props objectForKey:NSFontAttributeName];
+    FUFont *font = [FUFont wrap:[props objectForKey:FUFontAttributeName()]];
     TDNotNil(font);
     TDEqualObjects([font familyName], @"Courier");
     TDEquals((CGFloat)[font pointSize], (CGFloat)9.0);
     
-    NSColor *bgColor = [props objectForKey:NSBackgroundColorAttributeName];
+    FUColor *bgColor = [FUColor wrap:[props objectForKey:FUBackgroundColorAttributeName()]];
     TDNotNil(bgColor);
     STAssertEqualsWithAccuracy([bgColor redComponent], (CGFloat)(255.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([bgColor greenComponent], (CGFloat)(0.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([bgColor blueComponent], (CGFloat)(255.0/255.0), 0.001, @"");
     
-    NSColor *color = [props objectForKey:NSForegroundColorAttributeName];
+    FUColor *color = [FUColor wrap:[props objectForKey:FUForegroundColorAttributeName()]];
     TDNotNil(color);
     STAssertEqualsWithAccuracy([color redComponent], (CGFloat)(10.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([color greenComponent], (CGFloat)(200.0/255.0), 0.001, @"");
@@ -212,18 +213,18 @@
     props = [ass.attributes objectForKey:@"decl"];
     TDNotNil(props);
     
-    font = [props objectForKey:NSFontAttributeName];
+    font = [props objectForKey:FUFontAttributeName()];
     TDNotNil(font);
     TDEqualObjects([font familyName], @"Courier");
     TDEquals((CGFloat)[font pointSize], (CGFloat)9.0);
     
-    bgColor = [props objectForKey:NSBackgroundColorAttributeName];
+    bgColor = [FUColor wrap:[props objectForKey:FUBackgroundColorAttributeName()]];
     TDNotNil(bgColor);
     STAssertEqualsWithAccuracy([bgColor redComponent], (CGFloat)(255.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([bgColor greenComponent], (CGFloat)(0.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([bgColor blueComponent], (CGFloat)(255.0/255.0), 0.001, @"");
     
-    color = [props objectForKey:NSForegroundColorAttributeName];
+    color = [FUColor wrap:[props objectForKey:FUForegroundColorAttributeName()]];
     TDNotNil(color);
     STAssertEqualsWithAccuracy([color redComponent], (CGFloat)(10.0/255.0), 0.001, @"");
     STAssertEqualsWithAccuracy([color greenComponent], (CGFloat)(200.0/255.0), 0.001, @"");

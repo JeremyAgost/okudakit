@@ -25,6 +25,7 @@
 #import "TDJavaScriptParser.h"
 #import "TDNSPredicateEvaluator.h"
 #import <OCMock/OCMock.h>
+#import "FUColor.h"
 
 @protocol TDMockAssember
 - (void)didMatchFoo:(PKAssembly *)a;
@@ -83,8 +84,8 @@
     res = [p.dictParser completeMatchFor:a];
     
     id attrs = [NSDictionary dictionaryWithObjectsAndKeys:
-                [NSColor whiteColor], NSForegroundColorAttributeName,
-                [NSFont fontWithName:@"Monaco" size:12.], NSFontAttributeName,
+                [[FUColor whiteColor] attribute], FUForegroundColorAttributeName(),
+                [[FUFont fontWithName:@"Monaco" size:12.] attribute], FUFontAttributeName,
                 nil];
     id dict = [res pop];
     
@@ -242,8 +243,8 @@
     CGFloat ms4json4 = -([start timeIntervalSinceNow]);
     
     id attrs = [NSDictionary dictionaryWithObjectsAndKeys:
-                [NSFont fontWithName:@"Monaco" size:14.], NSFontAttributeName,
-                [NSColor whiteColor], NSForegroundColorAttributeName,
+                [[FUFont fontWithName:@"Monaco" size:14.] attribute], FUFontAttributeName,
+                [[FUColor whiteColor] attribute], FUForegroundColorAttributeName(),
                 nil];
 
     s = [NSString stringWithFormat:@"tokenization: %f \n\ngrammar parse: %f sec\n\nlp json parse: %f sec\n\np json parse (not assembled): %f sec\n\np json parse (assembled): %f sec\n\nfast json parse (assembled): %f sec\n\n %f", ms4tok, ms4grammar, ms4json, ms4json2, ms4json3, ms4json4, (ms4json3/ms4json4)];
@@ -264,8 +265,8 @@
     CGFloat secs = -([start timeIntervalSinceNow]);
     
     id attrs = [NSDictionary dictionaryWithObjectsAndKeys:
-                [NSFont fontWithName:@"Monaco" size:14.], NSFontAttributeName,
-                [NSColor whiteColor], NSForegroundColorAttributeName,
+                [[FUFont fontWithName:@"Monaco" size:14.] attribute], FUFontAttributeName,
+                [[FUColor whiteColor] attribute], FUForegroundColorAttributeName(),
                 nil];
 
     s = [NSString stringWithFormat:@"tokenize: %f", secs];

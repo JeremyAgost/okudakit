@@ -7,6 +7,7 @@
 //
 
 #import "OKGenericAssemblerTest.h"
+#import "FUColor.h"
 
 @implementation OKGenericAssemblerTest
 
@@ -41,18 +42,18 @@
 //    font-family:'Helvetica';
 //    font-size:17px;
     
-    NSFont *font = [props objectForKey:NSFontAttributeName];
+    FUFont *font = [FUFont wrap:[props objectForKey:FUFontAttributeName()]];
     TDNotNil(font);
     TDEqualObjects([font familyName], @"Monaco");
     TDEquals((CGFloat)[font pointSize], (CGFloat)11.0);
     
-    NSColor *bgColor = [props objectForKey:NSBackgroundColorAttributeName];
+    FUColor *bgColor = [FUColor wrap:[props objectForKey:FUBackgroundColorAttributeName()]];
     TDNotNil(bgColor);
     STAssertEqualsWithAccuracy([bgColor redComponent], (CGFloat)0.117, 0.001, @"");
     STAssertEqualsWithAccuracy([bgColor greenComponent], (CGFloat)0.117, 0.001, @"");
     STAssertEqualsWithAccuracy([bgColor blueComponent], (CGFloat)0.141, 0.001, @"");
     
-    NSColor *color = [props objectForKey:NSForegroundColorAttributeName];
+    FUColor *color = [FUColor wrap:[props objectForKey:FUForegroundColorAttributeName()]];
     TDNotNil(color);
     STAssertEqualsWithAccuracy([color redComponent], (CGFloat)0.7, 0.001, @"");
     STAssertEqualsWithAccuracy([color greenComponent], (CGFloat)0.14, 0.001, @"");

@@ -8,6 +8,7 @@
 
 #import "TDMiniCSSAssembler.h"
 #import "NSString+ParseKitAdditions.h"
+#import "FUColor.h"
 #import <ParseKit/ParseKit.h>
 
 @interface TDMiniCSSAssembler ()
@@ -86,7 +87,7 @@
     CGFloat blue  = [(PKToken *)[objs objectAtIndex:0] floatValue]/255.0;
     CGFloat green = [(PKToken *)[objs objectAtIndex:1] floatValue]/255.0;
     CGFloat red   = [(PKToken *)[objs objectAtIndex:2] floatValue]/255.0;
-    [a push:[NSColor colorWithDeviceRed:red green:green blue:blue alpha:1.0]];
+    [a push:[FUColor colorWithDeviceRed:red green:green blue:blue alpha:1.0]];
 }
 
 
@@ -119,18 +120,18 @@
 
 
 - (void)gatherPropertiesIn:(id)props {
-    NSColor *color = [props objectForKey:@"color"];
+    FUColor *color = [props objectForKey:@"color"];
     if (!color) {
-        color = [NSColor blackColor];
+        color = [FUColor blackColor];
     }
-    [props setObject:color forKey:NSForegroundColorAttributeName];
+    [props setObject:color forKey:FUForegroundColorAttributeName()];
     [props removeObjectForKey:@"color"];
 
     color = [props objectForKey:@"background-color"];
     if (!color) {
-        color = [NSColor whiteColor];
+        color = [FUColor whiteColor];
     }
-    [props setObject:color forKey:NSBackgroundColorAttributeName];
+    [props setObject:color forKey:FUBackgroundColorAttributeName()];
     [props removeObjectForKey:@"background-color"];
     
     NSString *fontFamily = [props objectForKey:@"font-family"];
@@ -143,8 +144,8 @@
         fontSize = 9.0;
     }
     
-    NSFont *font = [NSFont fontWithName:fontFamily size:fontSize];
-    [props setObject:font forKey:NSFontAttributeName];
+    FUFont *font = [FUFont fontWithName:fontFamily size:fontSize];
+    [props setObject:font forKey:FUFontAttributeName()];
     [props removeObjectForKey:@"font-family"];
     [props removeObjectForKey:@"font-size"];
 }
@@ -165,7 +166,7 @@
 //- (void)didMatchHexcolor:(PKAssembly *)a {
 //    PKToken *tok = [a pop];
 //    NSString *s = tok.stringValue;
-//    NSColor *color = nil;
+//    FUColor *color = nil;
 //    
 //    if (6 == s.length) {
 //        NSString *redStr   = [s substringWithRange:NSMakeRange(0, 2)];
@@ -176,9 +177,9 @@
 //        NSUInteger green = [self hexValueFor:greenStr];
 //        NSUInteger blue  = [self hexValueFor:blueStr];
 //        
-//        color = [NSColor colorWithDeviceRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
+//        color = [FUColor colorWithDeviceRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
 //    } else {
-//        color = [NSColor magentaColor]; // signals incorrect value in stylesheet
+//        color = [FUColor magentaColor]; // signals incorrect value in stylesheet
 //    }
 //    [a push:color];
 //}

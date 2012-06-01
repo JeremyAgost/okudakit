@@ -7,6 +7,7 @@
 //
 
 #import "TDGutterView.h"
+#import "FUColor.h"
 
 @interface TDGutterView ()
 @property (retain) NSDictionary *attrs;
@@ -16,8 +17,8 @@
 
 - (void)awakeFromNib {
     self.attrs = [NSDictionary dictionaryWithObjectsAndKeys:
-                  [NSFont userFixedPitchFontOfSize:11.], NSFontAttributeName,
-                  [NSColor grayColor], NSForegroundColorAttributeName,
+                  [[FUFont userFixedPitchFontOfSize:11.] attribute], FUFontAttributeName,
+                  [[FUColor grayColor] attribute], FUForegroundColorAttributeName(),
                   nil];    
 }
 

@@ -6,8 +6,11 @@
 //  Copyright 2009 Todd Ditchendorf. All rights reserved.
 //
 
+
 #import "OKMiniCSSAssembler.h"
 #import "NSString+ParseKitAdditions.h"
+#import "FUColor.h"
+#import "FUFont.h"
 #import <ParseKit/ParseKit.h>
 
 @interface OKMiniCSSAssembler ()
@@ -86,7 +89,8 @@
     CGFloat blue  = [(PKToken *)[objs objectAtIndex:0] floatValue]/255.0;
     CGFloat green = [(PKToken *)[objs objectAtIndex:1] floatValue]/255.0;
     CGFloat red   = [(PKToken *)[objs objectAtIndex:2] floatValue]/255.0;
-    [a push:[NSColor colorWithDeviceRed:red green:green blue:blue alpha:1.0]];
+	[a push:[FUColor colorWithDeviceRed:red green:green blue:blue alpha:1.0]];
+	
 }
 
 
@@ -119,18 +123,20 @@
 
 
 - (void)gatherPropertiesIn:(id)props {
-    NSColor *color = [props objectForKey:@"color"];
+
+    FUColor *color = [props objectForKey:@"color"];
     if (!color) {
-        color = [NSColor blackColor];
+        color = [FUColor blackColor];
     }
-    [props setObject:color forKey:NSForegroundColorAttributeName];
+    [props setObject:color forKey:FUForegroundColorAttributeName()];
     [props removeObjectForKey:@"color"];
 
     color = [props objectForKey:@"background-color"];
     if (!color) {
-        color = [NSColor whiteColor];
+        color = [FUColor whiteColor];
     }
-    [props setObject:color forKey:NSBackgroundColorAttributeName];
+	
+    [props setObject:color forKey:FUBackgroundColorAttributeName()];
     [props removeObjectForKey:@"background-color"];
     
     NSString *fontFamily = [props objectForKey:@"font-family"];
@@ -143,8 +149,8 @@
         fontSize = 9.0;
     }
     
-    NSFont *font = [NSFont fontWithName:fontFamily size:fontSize];
-    [props setObject:font forKey:NSFontAttributeName];
+    FUFont *font = [FUFont fontWithName:fontFamily size:fontSize];
+    [props setObject:font forKey:FUFontAttributeName()];
     [props removeObjectForKey:@"font-family"];
     [props removeObjectForKey:@"font-size"];
 }

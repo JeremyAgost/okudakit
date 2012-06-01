@@ -8,6 +8,7 @@
 
 #import "TDHtmlSyntaxHighlighter.h"
 #import "NSArray+ParseKitAdditions.h"
+#import "FUColor.h"
 #import <ParseKit/ParseKit.h>
 
 @interface TDHtmlSyntaxHighlighter ()
@@ -87,61 +88,61 @@
 //        self.endScriptToken = [PKToken tokenWithTokenType:PKTokenTypeSymbol stringValue:@"</script>" floatValue:0.0];
 //        [tokenizer.symbolState add:endScriptToken.stringValue];
 
-        NSFont *monacoFont = [NSFont fontWithName:@"Monaco" size:11.];
+        FUFont *monacoFont = [FUFont fontWithName:@"Monaco" size:11.];
         
-        NSColor *textColor = nil;
-        NSColor *tagColor = nil;
-        NSColor *attrNameColor = nil;
-        NSColor *attrValueColor = nil;
-        NSColor *eqColor = nil;
-        NSColor *commentColor = nil;
-        NSColor *piColor = nil;
+        FUColor *textColor = nil;
+        FUColor *tagColor = nil;
+        FUColor *attrNameColor = nil;
+        FUColor *attrValueColor = nil;
+        FUColor *eqColor = nil;
+        FUColor *commentColor = nil;
+        FUColor *piColor = nil;
         
         if (isDarkBG) {
-            textColor = [NSColor whiteColor];
-            tagColor = [NSColor colorWithDeviceRed:.70 green:.14 blue:.53 alpha:1.];
-            attrNameColor = [NSColor colorWithDeviceRed:.33 green:.45 blue:.48 alpha:1.];
-            attrValueColor = [NSColor colorWithDeviceRed:.77 green:.18 blue:.20 alpha:1.];
+            textColor = [FUColor whiteColor];
+            tagColor = [FUColor colorWithDeviceRed:.70 green:.14 blue:.53 alpha:1.];
+            attrNameColor = [FUColor colorWithDeviceRed:.33 green:.45 blue:.48 alpha:1.];
+            attrValueColor = [FUColor colorWithDeviceRed:.77 green:.18 blue:.20 alpha:1.];
             eqColor = tagColor;
-            commentColor = [NSColor colorWithDeviceRed:.24 green:.70 blue:.27 alpha:1.];
-            piColor = [NSColor colorWithDeviceRed:.09 green:.62 blue:.74 alpha:1.];
+            commentColor = [FUColor colorWithDeviceRed:.24 green:.70 blue:.27 alpha:1.];
+            piColor = [FUColor colorWithDeviceRed:.09 green:.62 blue:.74 alpha:1.];
         } else {
-            textColor = [NSColor blackColor];
-            tagColor = [NSColor purpleColor];
-            attrNameColor = [NSColor colorWithDeviceRed:0. green:0. blue:.75 alpha:1.];
-            attrValueColor = [NSColor colorWithDeviceRed:.75 green:0. blue:0. alpha:1.];
-            eqColor = [NSColor darkGrayColor];
-            commentColor = [NSColor grayColor];
-            piColor = [NSColor colorWithDeviceRed:.09 green:.62 blue:.74 alpha:1.];
+            textColor = [FUColor blackColor];
+            tagColor = [FUColor purpleColor];
+            attrNameColor = [FUColor colorWithDeviceRed:0. green:0. blue:.75 alpha:1.];
+            attrValueColor = [FUColor colorWithDeviceRed:.75 green:0. blue:0. alpha:1.];
+            eqColor = [FUColor darkGrayColor];
+            commentColor = [FUColor grayColor];
+            piColor = [FUColor colorWithDeviceRed:.09 green:.62 blue:.74 alpha:1.];
         }
         
         self.textAttributes            = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       textColor, NSForegroundColorAttributeName,
-                                       monacoFont, NSFontAttributeName,
+                                       [textColor attribute], FUForegroundColorAttributeName(),
+                                       [monacoFont attribute], FUFontAttributeName,
                                        nil];
         self.tagAttributes            = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       tagColor, NSForegroundColorAttributeName,
-                                       monacoFont, NSFontAttributeName,
+                                       [tagColor attribute], FUForegroundColorAttributeName(),
+                                       [monacoFont attribute], FUFontAttributeName,
                                        nil];
         self.attrNameAttributes        = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       attrNameColor, NSForegroundColorAttributeName,
-                                       monacoFont, NSFontAttributeName,
+                                       [attrNameColor attribute], FUForegroundColorAttributeName(),
+                                       [monacoFont attribute], FUFontAttributeName,
                                        nil];
         self.attrValueAttributes    = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       attrValueColor, NSForegroundColorAttributeName,
-                                       monacoFont, NSFontAttributeName,
+                                       [attrValueColor attribute], FUForegroundColorAttributeName(),
+                                       [monacoFont attribute], FUFontAttributeName,
                                        nil];
         self.eqAttributes            = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       eqColor, NSForegroundColorAttributeName,
-                                       monacoFont, NSFontAttributeName,
+                                       [eqColor attribute], FUForegroundColorAttributeName(),
+                                       [monacoFont attribute], FUFontAttributeName,
                                        nil];
         self.commentAttributes        = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       commentColor, NSForegroundColorAttributeName,
-                                       monacoFont, NSFontAttributeName,
+                                       [commentColor attribute], FUForegroundColorAttributeName(),
+                                       [monacoFont attribute], FUFontAttributeName,
                                        nil];
         self.piAttributes            = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       piColor, NSForegroundColorAttributeName,
-                                       monacoFont, NSFontAttributeName,
+                                       [piColor attribute], FUForegroundColorAttributeName(),
+                                       [monacoFont attribute], FUFontAttributeName,
                                        nil];
     }
     return self;

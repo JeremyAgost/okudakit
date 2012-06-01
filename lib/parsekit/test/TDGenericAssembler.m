@@ -8,6 +8,7 @@
 
 #import "TDGenericAssembler.h"
 #import "NSArray+ParseKitAdditions.h"
+#import "FUColor.h"
 #import <ParseKit/ParseKit.h>
 
 @interface TDGenericAssembler ()
@@ -29,9 +30,9 @@
     if (self = [super init]) {
         self.productionNames = [NSMutableDictionary dictionary];
         self.defaultProperties = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  [NSColor blackColor], NSForegroundColorAttributeName,
-                                  [NSColor whiteColor], NSBackgroundColorAttributeName,
-                                  [NSFont fontWithName:@"Monaco" size:11.0], NSFontAttributeName,
+                                  [[FUColor blackColor] attribute], FUForegroundColorAttributeName(),
+                                  [[FUColor whiteColor] attribute], FUBackgroundColorAttributeName(),
+                                  [[FUFont fontWithName:@"Monaco" size:11.0] attribute], FUFontAttributeName,
                                   nil];
         self.prefix = @"didMatch";
         self.suffix = @":";
