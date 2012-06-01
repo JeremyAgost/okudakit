@@ -47,7 +47,7 @@
 
 @end
 
-inline NSString * FUForegroundColorAttributeName()
+static inline NSString * FUForegroundColorAttributeName()
 {
 #if (TARGET_OS_IPHONE)
 	return (NSString *)kCTForegroundColorAttributeName;
@@ -56,7 +56,7 @@ inline NSString * FUForegroundColorAttributeName()
 #endif
 }
 
-inline NSString * FUBackgroundColorAttributeName()
+static inline NSString * FUBackgroundColorAttributeName()
 {
 #if (TARGET_OS_IPHONE)
 	return (NSString *)@"background-color";

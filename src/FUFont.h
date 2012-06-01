@@ -32,7 +32,7 @@
 @end
 
 
-inline NSString * FUFontAttributeName()
+static inline NSString * FUFontAttributeName()
 {
 #if (TARGET_OS_IPHONE)
 	return (NSString *)kCTFontAttributeName;
