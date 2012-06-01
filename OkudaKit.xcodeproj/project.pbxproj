@@ -23,15 +23,6 @@
 		80D74AF7157878C2001C7067 /* OkudaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D3A81B23101E904600C38137 /* OkudaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80D74AF8157878C8001C7067 /* OKSyntaxHighlighter.h in Headers */ = {isa = PBXBuildFile; fileRef = D3A81972101E8D5400C38137 /* OKSyntaxHighlighter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80D74AFA1578790F001C7067 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
-		80D74B041578791B001C7067 /* css.css in Resources */ = {isa = PBXBuildFile; fileRef = 80D74AFB1578791B001C7067 /* css.css */; };
-		80D74B051578791B001C7067 /* css.grammar in Resources */ = {isa = PBXBuildFile; fileRef = 80D74AFC1578791B001C7067 /* css.grammar */; };
-		80D74B061578791B001C7067 /* html.css in Resources */ = {isa = PBXBuildFile; fileRef = 80D74AFD1578791B001C7067 /* html.css */; };
-		80D74B071578791B001C7067 /* html.grammar in Resources */ = {isa = PBXBuildFile; fileRef = 80D74AFE1578791B001C7067 /* html.grammar */; };
-		80D74B081578791B001C7067 /* javascript.css in Resources */ = {isa = PBXBuildFile; fileRef = 80D74AFF1578791B001C7067 /* javascript.css */; };
-		80D74B091578791B001C7067 /* javascript.grammar in Resources */ = {isa = PBXBuildFile; fileRef = 80D74B001578791B001C7067 /* javascript.grammar */; };
-		80D74B0A1578791B001C7067 /* json.css in Resources */ = {isa = PBXBuildFile; fileRef = 80D74B011578791B001C7067 /* json.css */; };
-		80D74B0B1578791B001C7067 /* json.grammar in Resources */ = {isa = PBXBuildFile; fileRef = 80D74B021578791B001C7067 /* json.grammar */; };
-		80D74B0C1578791B001C7067 /* OKMini_css.grammar in Resources */ = {isa = PBXBuildFile; fileRef = 80D74B031578791B001C7067 /* OKMini_css.grammar */; };
 		80D74B0E157879A9001C7067 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D74B0D157879A9001C7067 /* UIKit.framework */; };
 		80D74B1215787E80001C7067 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D74B1115787E80001C7067 /* CoreText.framework */; };
 		80D74B1515788280001C7067 /* FUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D74B1315788280001C7067 /* FUColor.h */; };
@@ -184,15 +175,6 @@
 		80D74AE4157877F6001C7067 /* OkudaKitMobileTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OkudaKitMobileTests.h; sourceTree = "<group>"; };
 		80D74AE5157877F6001C7067 /* OkudaKitMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OkudaKitMobileTests.m; sourceTree = "<group>"; };
 		80D74AF41578788C001C7067 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		80D74AFB1578791B001C7067 /* css.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = css.css; path = res/css.css; sourceTree = "<group>"; };
-		80D74AFC1578791B001C7067 /* css.grammar */ = {isa = PBXFileReference; lastKnownFileType = text; name = css.grammar; path = res/css.grammar; sourceTree = "<group>"; };
-		80D74AFD1578791B001C7067 /* html.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = html.css; path = res/html.css; sourceTree = "<group>"; };
-		80D74AFE1578791B001C7067 /* html.grammar */ = {isa = PBXFileReference; lastKnownFileType = text; name = html.grammar; path = res/html.grammar; sourceTree = "<group>"; };
-		80D74AFF1578791B001C7067 /* javascript.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = javascript.css; path = res/javascript.css; sourceTree = "<group>"; };
-		80D74B001578791B001C7067 /* javascript.grammar */ = {isa = PBXFileReference; lastKnownFileType = text; name = javascript.grammar; path = res/javascript.grammar; sourceTree = "<group>"; };
-		80D74B011578791B001C7067 /* json.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = json.css; path = res/json.css; sourceTree = "<group>"; };
-		80D74B021578791B001C7067 /* json.grammar */ = {isa = PBXFileReference; lastKnownFileType = text; name = json.grammar; path = res/json.grammar; sourceTree = "<group>"; };
-		80D74B031578791B001C7067 /* OKMini_css.grammar */ = {isa = PBXFileReference; lastKnownFileType = text; name = OKMini_css.grammar; path = res/OKMini_css.grammar; sourceTree = "<group>"; };
 		80D74B0D157879A9001C7067 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		80D74B1115787E80001C7067 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		80D74B1315788280001C7067 /* FUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = FUColor.h; path = src/FUColor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -315,15 +297,6 @@
 		0867D691FE84028FC02AAC07 /* OkudaKit */ = {
 			isa = PBXGroup;
 			children = (
-				80D74AFB1578791B001C7067 /* css.css */,
-				80D74AFC1578791B001C7067 /* css.grammar */,
-				80D74AFD1578791B001C7067 /* html.css */,
-				80D74AFE1578791B001C7067 /* html.grammar */,
-				80D74AFF1578791B001C7067 /* javascript.css */,
-				80D74B001578791B001C7067 /* javascript.grammar */,
-				80D74B011578791B001C7067 /* json.css */,
-				80D74B021578791B001C7067 /* json.grammar */,
-				80D74B031578791B001C7067 /* OKMini_css.grammar */,
 				D3A81935101E8C7B00C38137 /* ParseKit.xcodeproj */,
 				08FB77AEFE84172EC02AAC07 /* OkudaKit Framework */,
 				D3A81975101E8D6000C38137 /* OkudaKit Tests */,
@@ -757,15 +730,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80D74AFA1578790F001C7067 /* InfoPlist.strings in Resources */,
-				80D74B041578791B001C7067 /* css.css in Resources */,
-				80D74B051578791B001C7067 /* css.grammar in Resources */,
-				80D74B061578791B001C7067 /* html.css in Resources */,
-				80D74B071578791B001C7067 /* html.grammar in Resources */,
-				80D74B081578791B001C7067 /* javascript.css in Resources */,
-				80D74B091578791B001C7067 /* javascript.grammar in Resources */,
-				80D74B0A1578791B001C7067 /* json.css in Resources */,
-				80D74B0B1578791B001C7067 /* json.grammar in Resources */,
-				80D74B0C1578791B001C7067 /* OKMini_css.grammar in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
