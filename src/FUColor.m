@@ -11,7 +11,7 @@
 #if (TARGET_OS_IPHONE)
 #define OSSPECColor UIColor
 #else
-#define OSSPECColor UIColor
+#define OSSPECColor NSColor
 #endif
 
 @implementation FUColor
